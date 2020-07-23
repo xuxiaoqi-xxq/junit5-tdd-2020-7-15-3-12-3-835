@@ -4,32 +4,19 @@ public class FizzBuzzWhizz {
 
 
     public String play(int number) {
-
-        if (number % 3 == 0 && number % 5 == 0 && number % 7 == 0) {
-            return "FizzBuzzWhizz";
-        }
-
-        if (number % 3 == 0 && number % 5 == 0) {
-            return "FizzBuzz";
-        }
-
-        if (number % 3 == 0 && number % 7 == 0) {
-            return "FizzWhizz";
-        }
-
-        if (number % 5 == 0 && number % 7 == 0) {
-            return "BuzzWhizz";
-        }
-
+        String answer = "";
         if (number % 3 == 0) {
-            return "Fizz";
+            answer += "Fizz";
         }
         if (number % 5 == 0) {
-            return "Buzz";
+            answer += "Buzz";
         }
         if (number % 7 == 0) {
-            return "Whizz";
+            answer += "Whizz";
         }
-        return String.valueOf(number);
+        if (answer.equals("")) {
+            answer = String.valueOf(number);
+        }
+        return answer;
     }
 }
