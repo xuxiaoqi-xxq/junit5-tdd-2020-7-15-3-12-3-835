@@ -5,6 +5,10 @@ public class FizzBuzzWhizz {
 
     public String play(int number) {
 
+        if (number % 3 == 0 && number % 5 == 0 && number % 7 == 0) {
+            return "FizzBuzzWhizz";
+        }
+
         if (number % 3 == 0 && number % 5 == 0) {
             return "FizzBuzz";
         }
